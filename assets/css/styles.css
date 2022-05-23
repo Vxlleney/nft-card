@@ -1,0 +1,204 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --cyan: hsl(178, 100%, 50%);
+    --soft-blue: hsl(215, 51%, 70%);
+
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --font: 'Outfit', sans-serif;
+  
+    --p-font-size: 18px; /* 15px */
+  
+    /*========== Font weight ==========*/
+    --font-medium: 300;
+    --font-semi-bold: 400;
+    --font-bold:  600;
+  }
+
+  /*=============== BASE ===============*/
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body{
+    background-color: var(--very-dark-blue-main);
+  }
+    
+  h1{
+    text-align: left;
+    font-family: var(--font);
+  }
+
+
+  p{
+    text-align: left;
+    font-family: var(--font);
+  }
+/*=============== MAIN ===============*/
+
+.main{
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.card{
+  align-self: center;
+  background-color: var(--very-dark-blue-card);
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.158) 0px 4px 50px;
+}
+
+img{
+  border-radius: 12px;
+  height: 370px;
+  width: 350px;
+}
+
+.title-card{
+    margin-top: 1.5rem;
+    font-size: 22px;
+    color: var(--white);
+}
+
+.title-card:hover{
+    color: var(--cyan);
+    margin-top: 1.5rem;
+    font-size: 22px;
+    transition: 0.8s;
+}
+
+.first-p{
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: var(--font-medium);
+  color: var(--soft-blue);
+}
+
+.align-price-clock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.price-eth{
+    display: flex;
+}
+
+.clock{
+    display: flex;
+}
+
+.price{
+    color: var(--cyan);
+    margin-left: 8px;
+    font-size: 1.1rem;
+}
+
+.time-right{
+    margin-left: 5px;
+    font-size: 1.1rem;
+    color: var(--soft-blue);
+}
+
+.clock-img{
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+.eth-img{
+    width: 0.8rem;
+    height: 1.2rem;
+    display: flex;
+}
+
+.line{
+    background-color: var(--very-dark-blue-line);
+    height: 1.2px;
+    width: auto;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.creator{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.creator-text{
+    color: var(--soft-blue);
+    margin-left: 1.5rem;
+}
+
+.creator-text span{
+    color: var(--white);
+}
+
+.creator-text span:hover{
+    color: var(--cyan);
+}
+
+.creator-img{
+    width: 10%;
+    height: 10%;
+    border: 1.9px solid var(--white);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1270px){
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card{
+      width: 100%;
+      height: auto;
+      flex: 1 0 33.3333%;
+      margin: 50px;
+    }
+  
+    img{
+      width: 100%;
+      height: auto;
+    }
+  
+  }
+
+  @media screen and (max-width: 400px){
+
+    .main{
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .card{
+      width: 100%;
+      height: auto;
+      flex: 1 0 33.3333%;
+    }
+  
+    img{
+      width: 100%;
+      height: auto;
+    }
+  
+  } 
